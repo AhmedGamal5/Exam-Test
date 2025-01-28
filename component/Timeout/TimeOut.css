@@ -1,0 +1,45 @@
+body {
+  background-image: url("../../images/background-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+}
+
+.Oops {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.Oops h2 {
+  font-size: 40px;
+}
+
+.Oops p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .Oops h2 {
+    font-size: 30px;
+  }
+
+  .Oops p {
+    font-size: 12px;
+  }
+  .oops-btn {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .oops-btn {
+    font-size: 8px;
+  }
+}

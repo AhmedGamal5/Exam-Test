@@ -1,0 +1,56 @@
+:root {
+  --primary-color: #c82090;
+  --question-back-color: rgb(109, 4, 136);
+  --secondary-color: #6a14d1;
+  --instruction-background: rgb(229, 212, 233);
+  --text-color: #555;
+  --background-color: #f8f9fa;
+  --white: #fff;
+  --border-color: #ddd;
+  --circle-color: #fff;
+  --dark-overlay-bg: #111418;
+  --leftside-overlay-color: rgba(111, 66, 193, 0.65);
+  --gradient: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  --hover-gradient: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  --font-family: "Arial, sans-serif";
+  --border-radius: 8px;
+  --error-red: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+.global-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  background-image: var(--gradient);
+  color: var(--circle-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  /* margin: 50px auto 0; */
+  margin: 20px auto;
+  transition: all 0.4s ease;
+  outline: none;
+}
+.global-btn:hover {
+  background-image: var(--hover-gradient);
+}

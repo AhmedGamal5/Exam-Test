@@ -1,0 +1,185 @@
+{
+  "React JS": [
+    {
+      "question": "What is React primarily used for?",
+      "choices": [
+        "Building mobile applications",
+        "Building user interfaces",
+        "Building server-side applications",
+        "Building databases"
+      ],
+      "answer": "Building user interfaces"
+    },
+    {
+      "question": "What is a React component?",
+      "choices": [
+        "A part of the backend code",
+        "A function or class that returns a React element",
+        "A stylesheet for the app",
+        "A database table"
+      ],
+      "answer": "A function or class that returns a React element"
+    },
+    {
+      "question": "What is the virtual DOM in React?",
+      "choices": [
+        "A copy of the real DOM that updates instantly",
+        "A part of the browser",
+        "A JavaScript function",
+        "A database schema"
+      ],
+      "answer": "A copy of the real DOM that updates instantly"
+    },
+    {
+      "question": "What is the purpose of React state?",
+      "choices": [
+        "To store the component's lifecycle",
+        "To manage and store data that changes over time",
+        "To manage static content",
+        "To define CSS styles"
+      ],
+      "answer": "To manage and store data that changes over time"
+    },
+    {
+      "question": "Which method is used to update the state in a React class component?",
+      "choices": [
+        "this.update()",
+        "this.setState()",
+        "setData()",
+        "updateState()"
+      ],
+      "answer": "this.setState()"
+    }
+  ],
+  "Angular": [
+    {
+      "question": "What is Angular used for?",
+      "choices": [
+        "Developing server-side applications",
+        "Building dynamic web apps",
+        "Creating mobile apps",
+        "Styling websites"
+      ],
+      "answer": "Building dynamic web apps"
+    },
+    {
+      "question": "What is a directive in Angular?",
+      "choices": [
+        "A CSS property",
+        "A tool for building modules",
+        "A marker on a DOM element that tells Angular to perform specific tasks",
+        "A database entity"
+      ],
+      "answer": "A marker on a DOM element that tells Angular to perform specific tasks"
+    },
+    {
+      "question": "Which file is used to define the main module in Angular?",
+      "choices": [
+        "main.module.ts",
+        "app.module.ts",
+        "index.module.ts",
+        "core.module.ts"
+      ],
+      "answer": "app.module.ts"
+    },
+    {
+      "question": "What does the Angular CLI stand for?",
+      "choices": [
+        "Command Line Interface",
+        "Component Library Integration",
+        "Custom Layout Installer",
+        "Client Level Interaction"
+      ],
+      "answer": "Command Line Interface"
+    },
+    {
+      "question": "What is a service in Angular?",
+      "choices": [
+        "A function that defines CSS styles",
+        "A way to share data and logic across components",
+        "A type of HTML element",
+        "A type of directive"
+      ],
+      "answer": "A way to share data and logic across components"
+    }
+  ],
+  "JavaScript": [
+    {
+      "question": "Which of the following is a primitive data type in JavaScript?",
+      "choices": ["Object", "String", "Array", "Function"],
+      "answer": "String"
+    },
+    {
+      "question": "How do you declare a variable in JavaScript?",
+      "choices": ["let", "def", "val", "declare"],
+      "answer": "let"
+    },
+    {
+      "question": "What does `typeof` operator return for an array?",
+      "choices": ["object", "array", "undefined", "list"],
+      "answer": "object"
+    },
+    {
+      "question": "What is the purpose of `isNaN()` function in JavaScript?",
+      "choices": [
+        "To check if a value is a number",
+        "To check if a value is NaN",
+        "To parse a string to a number",
+        "To check if a number is an integer"
+      ],
+      "answer": "To check if a value is NaN"
+    },
+    {
+      "question": "What is the default behavior of the `setTimeout()` function?",
+      "choices": [
+        "To delay the execution of code",
+        "To stop the execution of code",
+        "To loop over an array",
+        "To handle errors in a function"
+      ],
+      "answer": "To delay the execution of code"
+    }
+  ],
+  "HTML & CSS": [
+    {
+      "question": "What does HTML stand for?",
+      "choices": [
+        "HyperText Markup Language",
+        "HyperText Module Language",
+        "Home Tool Markup Language",
+        "HyperText Management Language"
+      ],
+      "answer": "HyperText Markup Language"
+    },
+    {
+      "question": "Which HTML tag is used to create a hyperlink?",
+      "choices": ["<a>", "<link>", "<href>", "<hyper>"],
+      "answer": "<a>"
+    },
+    {
+      "question": "What is the purpose of the `<div>` tag in HTML?",
+      "choices": [
+        "To define a table",
+        "To define a division or section in a document",
+        "To style text",
+        "To insert images"
+      ],
+      "answer": "To define a division or section in a document"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "choices": [
+        "Cascading Style Sheets",
+        "Computer Style Sheets",
+        "Creative Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "answer": "Cascading Style Sheets"
+    },
+    {
+      "question": "Which CSS property is used to change text color?",
+      "choices": ["text-color", "font-color", "color", "text-style"],
+      "answer": "color"
+    }
+  ]
+}
