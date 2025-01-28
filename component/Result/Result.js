@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * Adds an event listener to the back button to redirect to the login page.
      */
     backButton.addEventListener("click", () => {
-        window.location.href = "../login/login.html";
+        window.location.href = "../login/index.html";
     });
 });
   

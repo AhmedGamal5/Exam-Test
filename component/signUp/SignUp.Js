@@ -197,7 +197,7 @@ form.addEventListener('submit', (e) => {
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
 
-    window.location.href = '../login/login.html';
+    window.location.href = '../login/index.html';
   }
 });
 
