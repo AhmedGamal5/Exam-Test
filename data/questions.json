@@ -157,7 +157,7 @@
       "answer": "<a>"
     },
     {
-      "question": "What is the purpose of the `<div>` tag in HTML?",
+      "question": "What is the purpose of the div tag in HTML?",
       "choices": [
         "To define a table",
         "To define a division or section in a document",
