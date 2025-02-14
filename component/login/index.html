@@ -46,17 +46,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- animation library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
     <!-- website title -->
     <title>Login Page</title>
 
     <!-- css-styles -->
     <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../modules/loginAndSignup.css">
     <link rel="styleSheet" href="login.css" />
   </head>
 
@@ -64,15 +59,23 @@
     <div>
       <div class="overlay-bg"></div>
       <div style="display: flex; justify-content: center">
-        <div class="Mainbody">
+        <div class="main-body">
+
+           <!--**** Left-side-section ****-->
           <div class="LeftSide">
             <div class="text-overlay">Welcome To ITI Examination System</div>
           </div>
+
+           <!--**** Right-side-section ****-->
           <div class="card p-4 shadow RightSide">
+
+             <!--**** Header ****-->
             <h2 class="text-center mb-3">Sign In</h2>
             <p class="text-center">
               Don't have an account? <a href="../signUp/SignUp.html">Sign Up</a>
             </p>
+
+             <!--**** Form ****-->
             <form>
               <div class="form-group mb-3">
                 <label for="email" class="form-label">Email Address</label>
@@ -122,6 +125,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="login.Js"></script>
+    <script type="module" src="login.Js"></script>
   </body>
 </html>

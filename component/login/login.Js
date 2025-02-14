@@ -1,120 +1,71 @@
-/**
- * The form element being validated.
- * @type {HTMLFormElement}
- */
+// **** Import some functions from modules ****//
+import { displayErrorMessage, hiddenErrorMessage} from "../modules/formValidation.js";
+
+// **** Selecting Elements ****//
 const form = document.getElementsByTagName("form")[0];
-
-/**
- * The email input field.
- * @type {HTMLInputElement}
- */
 const EmailInput = document.getElementById("email");
-
-/**
- * The password input field.
- * @type {HTMLInputElement}
- */
 const PasswordInput = document.getElementById("password");
-
-/**
- * The element displaying email validation error messages.
- * @type {HTMLElement}
- */
 const EMerrorText = document.getElementById("EMerrorText");
-
-/**
- * The element displaying password validation error messages.
- * @type {HTMLElement}
- */
 const PWerrorText = document.getElementById("PWerrorText");
 
+let isValid = true;
+
 /**
- * Adds a submit event listener to validate the form inputs.
+ * Adds an event listener to the form for the 'submit' event.
+ * @param {Event} e The submit event object.
  */
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Get trimmed input values
   const eMailValue = EmailInput.value.trim();
   const PasswordValue = PasswordInput.value.trim();
-
-  // Email validation regex
   const MailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  let IsValid = true; // Flag to track if the form is valid
+  isValid = true;
 
-  // Email Validation
-  if (eMailValue === "") {
-    EMerrorText.innerText = "Email Is Required!";
-    EmailInput.classList.add("error-border");
-    EMerrorText.style.display = "block";
-    IsValid = false;
+  // **** Email Validation ****//
+  if (!eMailValue) {
+    displayErrorMessage(EmailInput, EMerrorText, "Email Is Required!");
   } else if (!MailRegex.test(eMailValue)) {
-    EMerrorText.innerText = "Email Must Be in the Required Format";
-    EmailInput.classList.add("error-border");
-    EMerrorText.style.display = "block";
-    IsValid = false;
+    displayErrorMessage(EmailInput, EMerrorText, "Please Enter a Valid Email");
   } else {
-    EmailInput.classList.remove("error-border");
-    EMerrorText.style.display = "none";
+    hiddenErrorMessage(EmailInput, EMerrorText);
   }
 
-  // Password Validation
-  if (PasswordValue === "") {
-    PWerrorText.innerText = "Password Is Required!";
-    PasswordInput.classList.add("error-border");
-    PWerrorText.style.display = "block";
-    IsValid = false;
+  // **** Password Validation ****//
+  if (!PasswordValue) {
+    displayErrorMessage(PasswordInput, PWerrorText, "Password Is Required!");
   } else if (PasswordValue.length < 9) {
-    PWerrorText.innerText = "Password Must Contain at Least 9 Characters!";
-    PasswordInput.classList.add("error-border");
-    PWerrorText.style.display = "block";
-    IsValid = false;
+    displayErrorMessage(
+      PasswordInput,
+      PWerrorText,
+      "Password Must Contain at Least 9 Characters!"
+    );
   } else {
-    PasswordInput.classList.remove("error-border");
-    PWerrorText.style.display = "none";
+    hiddenErrorMessage(PasswordInput, PWerrorText);
   }
 
-  // Proceed if the form is valid
-  if (IsValid) {
-    /**
-     * Retrieves the list of users from local storage.
-     * @type {Array<{email: string, password: string}>}
-     */
+  // **** Check if Email Exists in Local Storage ****//
+  if (isValid) {
     const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Find the user by email
     const user = users.find((user) => user.email === eMailValue);
 
-    // Validate user existence and password
     if (!user) {
-      EMerrorText.innerText = "This Email is not registered!";
-      EMerrorText.style.display = "block";
-      EmailInput.classList.add("error-border");
+      displayErrorMessage(EmailInput, EMerrorText, "This Email is not registered!");
     } else if (user.password !== PasswordValue) {
-      PWerrorText.innerText = "Incorrect password!";
-      PWerrorText.style.display = "block";
-      PasswordInput.classList.add("error-border");
+      displayErrorMessage(PasswordInput, PWerrorText, "Incorrect Password!");
     } else {
-      // Store current user in localStorage and redirect
       localStorage.setItem("currentUser", JSON.stringify(user));
       window.location.href = "../exam/exam.html";
     }
   }
 });
 
-/**
- * Clears the email error state when the input value changes.
- */
+// **** Events To Clear Errors on Input ****//
 EmailInput.addEventListener("input", () => {
-  EmailInput.classList.remove("error-border");
-  EMerrorText.style.display = "none";
+  hiddenErrorMessage(EmailInput, EMerrorText);
 });
 
-/**
- * Clears the password error state when the input value changes.
- */
 PasswordInput.addEventListener("input", () => {
-  PasswordInput.classList.remove("error-border");
-  PWerrorText.style.display = "none";
+  hiddenErrorMessage(PasswordInput, PWerrorText);
 });

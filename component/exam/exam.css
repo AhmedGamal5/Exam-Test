@@ -27,8 +27,8 @@ body {
   align-items: center;
   gap: 25px;
 }
-.quiz-options .option-container.selected::before,
-.quiz-options .option-container.selected::after {
+.selected::before,
+.selected::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -37,11 +37,11 @@ body {
   background-color: var(--primary-color);
 }
 
-.quiz-options .option-container.selected::before {
+.selected::before {
   left: -25px;
 }
 
-.quiz-options .option-container.selected::after {
+.selected::after {
   right: -25px;
 }
 .option-container {
